@@ -1,0 +1,13 @@
+html {
+  background: url("http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/content_bg_top.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}

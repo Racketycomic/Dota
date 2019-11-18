@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link href="{{url_for('static',filename='css/tabcss.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="http://www.dota2.com/public/css/store.css?v=AAUevGOOGmqu" rel="stylesheet" type="text/css" >
+
+<style>
+.table {
+  width=50%;
+  border: 1px black solid;
+  align:center
+
+}
+td{
+  color: black;
+  background-color: white;
+  border:1px black solid;
+  font-size: 16px;
+  font-style: fancystyle12;
+}
+th {
+  font-size: 16px;
+  border: 1px white solid;
+  color: white;
+}
+
+a {
+  size: 18;
+  color: red;
+}
+p {
+  font-size: 20;
+  font color: white;
+}
+</style>
+
+
+
+  <title>Bootstrap Example</title>
+
+</head>
+<body class="MainBackgroundImage">
+
+<div class="container">
+  <table class="table w-auto table-bordered">
+    <p>Radiant</p>
+    <tbody>
+      <tr>
+        <th>Username</th>
+        <th>Heroname</th>
+        <th>K</th>
+        <th>D</th>
+        <th>A</th>
+        <th>KDA</th>
+        <th>XPM</th>
+        <th>GPM</th>
+        <th>Result</th>
+
+      </tr>
+      {% for u in radiant %}
+      <tr>
+
+        <td>{{u.playername}} </td>
+        <td>{{u.heroname}} </td>
+        <td>{{u.kill_count}} </td>
+        <td>{{u.death_count}} </td>
+        <td>{{u.assist_count}} </td>
+        <td>{{u.kdaratio}} </td>
+        <td>{{u.xpm}} </td>
+        <td>{{u.gpm}} </td>
+        <td>{{u.result}} </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+  <table class="table w-auto table-bordered">
+    <p>Dire</p>
+    <tbody>
+      <tr>
+        <th>Username</th>
+        <th>Heroname</th>
+        <th>K</th>
+        <th>D</th>
+        <th>A</th>
+        <th>KDA</th>
+        <th>XPM</th>
+        <th>GPM</th>
+        <th>Result</th>
+
+      </tr>
+      {% for u in dire %}
+      <tr>
+
+        <td>{{u.playername}} </td>
+        <td>{{u.heroname}} </td>
+        <td>{{u.kill_count}} </td>
+        <td>{{u.death_count}} </td>
+        <td>{{u.assist_count}} </td>
+        <td>{{u.kdaratio}} </td>
+        <td>{{u.xpm}} </td>
+        <td>{{u.gpm}} </td>
+        <td>{{u.result}} </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+    <table class="table w-auto table-bordered">
+        <tbody>
+            <tr>
+                <th>MatchID</th>
+                <th>Total Kills</th>
+                <th>Total Assists</th>
+                <th>Total Deaths</th>
+                <th>Total Gold</th>
+                <th>Total Experience</th>
+                <th>Duration</th>
+                <th>Winner Team</th>
+            </tr>
+            {% for u in users %}
+            <tr>
+                <td>{{u.mid}} </td>
+                <td>{{u.tot_kills}} </td>
+                <td>{{u.tot_assist}} </td>
+                <td>{{u.tot_death}} </td>
+                <td>{{u.tot_gold}} </td>
+                <td>{{u.tot_xp}} </td>
+                <td>{{u.duration}} </td>
+                <td>{{u.winner}} </td>
+            </tr>
+            {% endfor %}
+
+
+
+
+        </tbody>
+    </table>
+</div>
+<center>  <a href="{{url_for('mids')}}">Check a new Match</a></center>
+
+</body>
+</html>

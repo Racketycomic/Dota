@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   <head>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js"></script>
+
+    <link rel="shortcut icon" href="http://www.dota2.com/images/favicon.ico" type="image/x-icon">
+
+    <title>Dota 2</title>
+
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="stylesheet" type="text/css" media="all" href="http://blog.dota2.com/wp-content/themes/dota2_2014/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="http://cdn.dota2.com/apps/dota2/css/static/font_goudytrajan.css">
+    <link rel="pingback" href="http://blog.dota2.com/xmlrpc.php">
+
+    <link rel="image_src" href="http://blog.dota2.com/images/logo_112.png">
+    <link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Dota 2 » Feed" href="http://blog.dota2.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dota 2 » Comments Feed" href="http://blog.dota2.com/comments/feed/">
+<script src="http://blog.dota2.com/wp-includes/js/wp-emoji-release.min.js?ver=5.0.7" type="text/javascript" defer=""></script>
+<link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='css/dota.css')}}">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="http://blog.dota2.com/wp-includes/css/dist/block-library/style.min.css?ver=5.0.7" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-legacy-vertical-list-0-css" href="//blog.dota2.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-vertical/style.css?ver=1" type="text/css" media="all">
+<link id="wpml-legacy-vertical-list-0-inline-css" type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/dota2.css')}}">
+
+
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+
+<script type="text/javascript" src="http://blog.dota2.com/wp-content/plugins/sitepress-multilingual-cms/res/js/xdomain-data.js?ver=4.1.4"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.dota2.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.dota2.com/wp-includes/wlwmanifest.xml">
+
+
+   <body>
+
+
+{% block Firstblock %} {% endblock %}
+         <center><p id="qwer"> <font style="navBarItem DotaFont">Dota Analytica  </font></p></center>
+
+
+<div id="navBarBGRepeat" style="display: block;">
+
+    <div id="navBarBGRepeat" class="DotaFont">
+
+        <div id="navBarShadow"></div>
+        <div id="navBarBG">
+            <div id="navBar">
+
+                <span class="navItem navItemDotaLogo">
+					<a class="navBarItem DotaFont" href="{{url_for('index')}}">
+						<img border="0" class="DotaLogo" src="http://cdn.dota2.com/apps/dota2/images/nav/logo.png">
+					</a>
+				</span>
+
+                <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('items')}}">Items</a>
+				</span>
+
+               <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('heroes')}}">Heropedia</a>
+
+				</span>
+          {% if current_user.is_anonymous%}
+                <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('login')}}">Login</a>
+				</span>
+                <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('register')}}">Register</a>
+				</span>
+            {% else %}
+            <span class="navItem">
+      <a class="navBarItem DotaFont" href="{{url_for('performance')}}">Performance</a>
+    </span>
+            <span class="navItem">
+    <a class="navBarItem DotaFont" href="{{url_for('mids')}}">Matchdetail</a>
+      </span>
+            <span class="navItem">
+      <a class="navBarItem DotaFont" href="{{url_for('logout')}}">Logout</a>
+    </span>
+
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+ {% block navbar %}   {% endblock %}
+
+       <div id="calloutHeader">
+	<div id="calloutHeaderLink">
+		<div id="calloutHeaderLink"><a href=""><img src="http://blog.dota2.com/wp-includes/images/blank.gif" width="938" height="377" border="0" /></a></div>
+	</div>
+</div>
+
+<div id="mainContentSideBG">
+        <div id="mainContentBG">
+            <div id="mainContent">
+
+                <div id="noTabArea"></div>
+
+
+                <div id="primary" >
+
+
+
+
+
+
+
+                                <a class="hoverBG rcbLink" href="http://www.dota2.com/international/battlepass" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_battlepass_2019_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0"></a>
+
+			<div ></></div>
+			<div >
+                            <center></center>
+				<div >
+
+
+				</div>
+						<div class="widget valve_widget_recent_entries">
+
+
+
+									</div>				<div id="recentPostsBottomBar"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rightcol_recentposts_bot.png" width="294" height="10" border="0" /></div>
+			</div>
+
+
+			<div id="rightColDotaLinks">
+				<a id="dotaLinkImgFacebook" class="rightColDotaLinkImg" href="http://www.facebook.com/pages/Dota-2/106876872711112" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_facebook.png" width="23" height="23" border="0" /></a>
+				<a id="dotaLinkFacebook" class="rightColDotaLink" href="http://www.facebook.com/pages/Dota-2/106876872711112" target="_blank">Facebook</a>
+
+				<a id="dotaLinkImgTwitter" class="rightColDotaLinkImg" href="http://twitter.com/DOTA2" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_twitter.png" width="24" height="24" border="0" /></a>
+				<a id="dotaLinkTwitter" class="rightColDotaLink" href="http://twitter.com/DOTA2" target="_blank">Twitter</a>
+
+
+{% block form %} {% endblock %}
+			</div>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/dpc/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_dpc.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0"></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/mars/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_mars.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0"></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/frosthaven/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_frosthaven_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/720" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_720_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+	<a class="hoverBG rcbLink" href="http://www.dota2.com/grimstroke" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_grimstroke_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+	<a class="hoverBG rcbLink" href="http://www.dota2.com/international/overview" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_international_2018_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+	<a class="hoverBG rcbLink" href="http://www.dota2.com/international/battlepass" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_battlepass_2018_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+	<a class="hoverBG rcbLink" href="http://www.dota2.com/feastofabscession" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/rightcol_feastofabscession_button.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+
+
+
+
+			<p><br /></p>
+			<p><br /></p>
+			<br /><br />
+
+		</div>
+
+			<div id="mainLoop">
+
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://blog.dota2.com/page/2/?l=english" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"></div>
+	</div>
+
+
+		<div id="post-14046" class="post-14046 post type-post status-publish format-standard hentry category-uncategorized">
+			<h2 class="entry-title"><a href="http://blog.dota2.com/2019/08/the-international-grand-champions-3/" title="Permalink to The International Grand Champions" rel="bookmark">The International Grand Champions</a></h2>
+
+			<div class="entry-meta">
+				October 30, 2019 - Dota Team BNM			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p><a href="http://cdn.dota2.com/apps/dota2/images/blogfiles/ti9_winners_big.jpg"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/ti9_winners_blog.png" alt="" width="100%" /></a></p>
+                                <center><p><b style="color: #b7b7b7">Road to the Aegis</b><br />
+                                        Congratulations to OG, Grand Champions at The International 2019.</p></center>
+                                <center><p>OG rebuffed every challenger and silenced all critics as the first reigning champions in the history of The International to successfully defend their hold on the Aegis of Champions.</p>
+<p>After a dominating Group Stage that saw them drop only two games to their fourteen wins, OG squared off against a Newbee squad that was eager to prove themselves on the Main Stage. Newbee eked out a small advantage in the early goings of game one before OG took over and snowballed to victory. The defending champs never trailed in game two, and Newbee failed to kill ana&#8217;s Juggernaut even a single time.</p>
+<p>As bearers of the ultimate symbol of victory, these names shall forever be inscribed&#8211;again&#8211;upon the Aegis of Champions:</p></center>
+<p><b><P ALIGN=CENTER>2019<br />
+Anathan "ana" Pham<br />
+Topias "Topson" Taavitsainen<br />
+Sebastien "Ceb" Debs<br />
+Jesse "JerAx" Vainikka<br />
+Johan "N0tail" Sundstein</p>
+
+======<br />
+<div id="post-13971" class="post-13971 post type-post status-publish format-standard hentry category-uncategorized">
+			<h2 class="entry-title"><a href="http://blog.dota2.com/2019/08/tiny-prestige-item-and-custom-creeps/" title="Permalink to Tiny Prestige Item and Custom Creeps" rel="bookmark">Tiny Prestige Item and Custom Creeps</a></h2>
+
+			<div class="entry-meta">
+				october 30, 2019 - Dota Team BNM			</div>
+
+				<div class="entry-content">
+				<p><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/tinyprestzw_rrcreeps_blog_iim.png" alt="" width="100%" /></p>
+                                <center><p>Today&#8217;s update rolls out the exclusive &#8216;Majesty of the Colossus&#8217; prestige item set for Tiny at Battle Level 255 along with the &#8216;Reptilian Refuge&#8217; custom Radiant and Dire creeps at level 182 to fill out the Battle Pass rewards line as we approach The International.</p>
+<p>Featuring completely new models for each of his Grow states, plus custom animations and effects for Avalanche and Tree Grab, the &#8216;Majesty of the Colossus&#8217; can only be earned by increasing your Battle Level to 255 before the conclusion of The International 2019 Battle Pass. Players who&#8217;ve already grown to level 255 can claim this item set from the rewards line and roll into the lanes in splendor and style.</p>
+<p>To accommodate the release of this new item set, Tiny&#8217;s item slots have also been updated and simplified to correspond to his four levels of Grow, and his materials have been optimized to allow for more robust content creation. This means he will soon become available on the workshop, and that artists will only need to focus on making items to fit four base slots and one weapon slot on any future Tiny designs.</p>
+<p><b style="color: #b7b7b7">The International Group Stage</b></p>
+<p>The first Group Stage action of The International kicks off at 9:00 am on Thursday, August 15 in Shanghai. With seeding in the Main Event at stake right from the start, make sure to <a href="https://twitch.tv/dota2ti">tune in to the main stream</a> to see the first stage of the tournament unfold.</p></center>
+					<br clear="left" />
+							</div>
+
+		</div>
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://blog.dota2.com/page/2/?l=english" ><span class="meta-nav"></span> </a></div>
+					<div class="nav-next"></div>
+				</div><!-- #nav-below -->
+				<br clear="right" />
+			</div>
+		</div><!-- /mainContent -->
+		<div id="mainContentBottomBG"></div>
+	</div><!-- /mainContentBG -->
+</div><!-- /mainContentSideBG -->
+        </div>
+</div>
+<div id="footer" role="contentinfo">
+
+
+
+			<div id="footer-widget-area" role="complementary">
+
+				<div id="first" class="widget-area">
+					<ul class="xoxo">
+								<li id="dota2-recent-posts-4" class="widget-container valve_widget_recent_entries">
+					<div class="archive_column">
+
+							</div>
+
+
+
+	<div class="legal_footer">
+		<img id="valveLogoLegal" src="http://media.steampowered.com/apps/dota2/images/blogfiles/valve_logo_footer.png" width="112" height="34" border="0" />
+		&copy; Valve Corporation BNMIT, all rights reserved.Valve Source and Dota are trademarks and/or registered trademarks of Valve Corporation BNMIT.
+	</div>
+</div>
+<script type='text/javascript' src='http://blog.dota2.com/wp-includes/js/wp-embed.min.js?ver=5.0.7'></script>
+
+
+</body>
+</html>

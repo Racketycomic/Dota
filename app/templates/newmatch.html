@@ -1,0 +1,114 @@
+
+<head>
+     <link href="{{url_for('static',filename='css/tabcss.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="http://www.dota2.com/public/css/store.css?v=AAUevGOOGmqu" rel="stylesheet" type="text/css" >
+
+<link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='css/dota.css')}}">
+<link id="wpml-legacy-vertical-list-0-inline-css" type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/dota2.css')}}">
+<style>
+  div{
+    display: block;
+    text-align :center;
+    margin-top:200px;
+  }
+  p{
+    font-size:30px;
+    color:cyan;
+  }
+  .form-control {
+    display: block;
+    width: 40%;
+    height: 34px;
+    padding: 8px 12px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #584646;
+    background-image: none;
+  }
+  .fsSubmitButton
+{
+	border-top:		2px solid #a3ceda;
+	border-left:		2px solid #a3ceda;
+	border-right:		2px solid #4f6267;
+	border-bottom:		2px solid #4f6267;
+	padding:		10px 20px !important;
+	font-size:		14px !important;
+	background-color:	#c4f1fe;
+	font-weight:		bold;
+	color:			#2d525d;
+}
+  </style>
+
+
+  <title>Bootstrap Example</title>
+
+</head>
+<center>	<div id="navBarBGRepeat" class="DotaFont">
+
+      <div id="navBarShadow"></div>
+      <div id="navBarBG">
+          <div id="navBar">
+
+              <span class="navItem navItemDotaLogo">
+        <a class="navBarItem DotaFont" href="{{url_for('index')}}">
+          <img border="0" class="DotaLogo" src="http://cdn.dota2.com/apps/dota2/images/nav/logo.png">
+        </a>
+      </span>
+
+              <span class="navItem">
+        <a class="navBarItem DotaFont" href="{{url_for('items')}}">Items</a>
+      </span>
+
+             <span class="navItem">
+        <a class="navBarItem DotaFont" href="{{url_for('heroes')}}">Heropedia</a>
+
+      </span>
+        {% if current_user.is_anonymous%}
+              <span class="navItem">
+        <a class="navBarItem DotaFont" href="{{url_for('login')}}">Login</a>
+      </span>
+              <span class="navItem">
+        <a class="navBarItem DotaFont" href="{{url_for('register')}}">Register</a>
+      </span>
+          {% else %}
+          <span class="navItem">
+    <a class="navBarItem DotaFont" href="{{url_for('performance')}}">Performance</a>
+  </span>
+          <span class="navItem">
+  <a class="navBarItem DotaFont" href="{{url_for('mids')}}">Matchdetail</a>
+    </span>
+          <span class="navItem">
+    <a class="navBarItem DotaFont" href="{{url_for('logout')}}">Logout</a>
+  </span>
+
+          {% endif %}
+          </div>
+      </div>
+  </div>
+  </div>
+</center>
+<body class="MainBackgroundImage">
+  <div class="container">
+  <center><p>Enter Match ID </p><center>
+
+<form  action="" method="post">
+      {{form.hidden_tag()}}
+
+
+      {{form.matchid(class="form-control",placeholder="Match id")}}<br>
+      {% for error in form.matchid.errors %}
+      <span>[{{error}}]</span>
+      {% endfor %}
+
+      {{form.matchinfo(class="fsSubmitButton")}}<br>
+
+
+</form>
+
+
+</body>
+</html>

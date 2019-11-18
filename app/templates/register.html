@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sign Up V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+		<link rel="icon" type="image/png" href="{{url_for('static',filename='images/icons/favicon.ico')}}"/>
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animate/animate.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animsition/css/animsition.min.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/select2/select2.min.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/daterangepicker/daterangepicker.css')}}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/util.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='css/dota.css')}}">
+	<link id="wpml-legacy-vertical-list-0-inline-css" type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/dota2.css')}}">
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js"></script>
+
+	<link rel="shortcut icon" href="http://www.dota2.com/images/favicon.ico" type="image/x-icon">
+
+	<title>Dota 2</title>
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="stylesheet" type="text/css" media="all" href="http://blog.dota2.com/wp-content/themes/dota2_2014/style.css">
+	<link rel="stylesheet" type="text/css" media="all" href="http://cdn.dota2.com/apps/dota2/css/static/font_goudytrajan.css">
+	<link rel="pingback" href="http://blog.dota2.com/xmlrpc.php">
+
+	<link rel="image_src" href="http://blog.dota2.com/images/logo_112.png">
+	<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Dota 2 » Feed" href="http://blog.dota2.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dota 2 » Comments Feed" href="http://blog.dota2.com/comments/feed/">
+<script src="http://blog.dota2.com/wp-includes/js/wp-emoji-release.min.js?ver=5.0.7" type="text/javascript" defer=""></script>
+<link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='css/dota.css')}}">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="http://blog.dota2.com/wp-includes/css/dist/block-library/style.min.css?ver=5.0.7" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-legacy-vertical-list-0-css" href="//blog.dota2.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-vertical/style.css?ver=1" type="text/css" media="all">
+<link id="wpml-legacy-vertical-list-0-inline-css" type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/dota2.css')}}">
+
+
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+
+<script type="text/javascript" src="http://blog.dota2.com/wp-content/plugins/sitepress-multilingual-cms/res/js/xdomain-data.js?ver=4.1.4"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.dota2.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.dota2.com/wp-includes/wlwmanifest.xml">
+
+</head>
+<body>
+	<center>	<div id="navBarBGRepeat" class="DotaFont">
+
+				<div id="navBarShadow"></div>
+				<div id="navBarBG">
+						<div id="navBar">
+
+								<span class="navItem navItemDotaLogo">
+					<a class="navBarItem DotaFont" href="{{url_for('index')}}">
+						<img border="0" class="DotaLogo" src="http://cdn.dota2.com/apps/dota2/images/nav/logo.png">
+					</a>
+				</span>
+
+								<span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('items')}}">Items</a>
+				</span>
+
+							 <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('heroes')}}">Heropedia</a>
+
+				</span>
+					{% if current_user.is_anonymous%}
+								<span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('login')}}">Login</a>
+				</span>
+								<span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('register')}}">Register</a>
+				</span>
+						{% else %}
+						<span class="navItem">
+			<a class="navBarItem DotaFont" href="{{url_for('performance')}}">Performance</a>
+		</span>
+						<span class="navItem">
+		<a class="navBarItem DotaFont" href="{{url_for('mids')}}">Matchdetail</a>
+			</span>
+						<span class="navItem">
+			<a class="navBarItem DotaFont" href="{{url_for('logout')}}">Logout</a>
+		</span>
+
+						{% endif %}
+						</div>
+				</div>
+		</div>
+		</div>
+	</center>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="" method="post" novalidate>
+					{{form.hidden_tag()}}
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Sign Up
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						{{form.username(class="input100",placeholder="Username")}}
+					<!--	<input class="input100" type="text" name="username" placeholder="Username"> -->
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					{% for error in form.username.errors%}
+
+						[{{error}}]
+						{% endfor %}
+					</div>
+
+            <div class="wrap-input100 validate-input" data-validate = "Enter email">
+								{{form.email(class="input100",placeholder="Email")}}
+								<span class="focus-input100" data-placeholder="&#xf203;"></span>
+						<!--<input class="input100" type="email" name="email" placeholder="Email">-->
+							{% for error in form.email.errors%}
+
+						[{{error}}]
+						{% endfor %}
+					</div>
+
+
+
+
+
+            <div class="wrap-input100 validate-input" data-validate = "Enter player id">
+							{{form.id(class="input100",placeholder="Player ID")}}
+								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					<!--	<input class="input100" type="text" name="email" placeholder="Player ID"> -->
+						{% for error in form.id.errors%}
+						<span class="focus-input100" ></span>
+						[{{error}}]
+						{% endfor %}
+					</div>
+
+
+
+
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						{{form.password(class="input100",placeholder="Password")}}
+							<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					<!--	<input class="input100" type="password" name="pass" placeholder="Password"> -->
+					{% for error in form.password.errors%}
+						<span class="focus-input100"></span>
+						[{{error}}]
+						{% endfor %}
+
+					</div>
+
+
+
+
+            <div class="wrap-input100 validate-input" data-validate="Re-Enter password">
+								{{form.password2(class="input100",placeholder="Password")}}
+						<!--<input class="input100" type="password" name="rpass" placeholder="Re-Enter Password">-->
+							<span class="focus-input100" data-placeholder="&#xf191;"></span>
+						{% for error in form.password2.errors%}
+
+						[{{error}}]
+						{% endfor %}
+					</div>
+
+
+
+
+					<div class="container-login100-form-btn">
+						{{form.submit(class="login100-form-btn",placeholder="Register")}}
+					<!--	<button class="login100-form-btn">
+							Register
+						</button>-->
+					</div>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

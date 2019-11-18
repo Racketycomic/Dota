@@ -1,0 +1,77 @@
+<html>
+   <head>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js"></script>
+
+    <link rel="shortcut icon" href="http://www.dota2.com/images/favicon.ico" type="image/x-icon">
+
+    <title>Dota 2</title>
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="http://blog.dota2.com/wp-includes/css/dist/block-library/style.min.css?ver=5.0.7" type="text/css" media="all">
+<link rel="stylesheet" id="wpml-legacy-vertical-list-0-css" href="//blog.dota2.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-vertical/style.css?ver=1" type="text/css" media="all">
+<link id="wpml-legacy-vertical-list-0-inline-css" type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/dota2.css')}}">
+
+
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+
+<script type="text/javascript" src="http://blog.dota2.com/wp-content/plugins/sitepress-multilingual-cms/res/js/xdomain-data.js?ver=4.1.4"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.dota2.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.dota2.com/wp-includes/wlwmanifest.xml">
+
+
+   <body bgcolor="white">
+
+
+
+         <center><p id="qwer"> <font style="navBarItem DotaFont">Dota Analytica </font></p></center>
+
+
+
+{% block Firstblock %} {% endblock %}
+    <div id="navBarBGRepeat" class="DotaFont">
+
+        <div id="navBarShadow"></div>
+        <div id="navBarBG">
+            <div id="navBar">
+
+                <span class="navItem navItemDotaLogo">
+					<a class="navBarItem DotaFont" href="http://www.dota2.com/">
+						<img border="0" class="DotaLogo" src="http://cdn.dota2.com/apps/dota2/images/nav/logo.png">
+					</a>
+				</span>
+
+                <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('items')}}">Items</a>
+				</span>
+
+               <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('heroes')}}">Heropedia</a>
+
+				</span>
+          {% if current_user.is_anonymous%}
+                <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('login')}}">Login</a>
+				</span>
+                <span class="navItem">
+					<a class="navBarItem DotaFont" href="{{url_for('register')}}">Register</a>
+				</span>
+            {% else %}
+            <span class="navItem">
+      <a class="navBarItem DotaFont" href="{{url_for('performance')}}">Performance</a>
+    </span>
+            <span class="navItem">
+    <a class="navBarItem DotaFont" href="{{url_for('mids')}}">Matchdetail</a>
+      </span>
+            <span class="navItem">
+      <a class="navBarItem DotaFont" href="{{url_for('logout')}}">Logout</a>
+    </span>
+
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+ {% block navbar %}   {% endblock %}
