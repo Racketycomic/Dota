@@ -6,9 +6,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <link href="http://www.dota2.com/public/css/store.css?v=AAUevGOOGmqu" rel="stylesheet" type="text/css" >
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js"></script>
 
-<link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='css/dota.css')}}">
-<link id="wpml-legacy-vertical-list-0-inline-css" type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/dota2.css')}}">
+<link rel="shortcut icon" href="http://www.dota2.com/images/favicon.ico" type="image/x-icon">
+
+<title>Dota 2</title>
+
 <style>
   div{
     display: block;
@@ -47,50 +51,7 @@
   <title>Bootstrap Example</title>
 
 </head>
-<center>	<div id="navBarBGRepeat" class="DotaFont">
 
-      <div id="navBarShadow"></div>
-      <div id="navBarBG">
-          <div id="navBar">
-
-              <span class="navItem navItemDotaLogo">
-        <a class="navBarItem DotaFont" href="{{url_for('index')}}">
-          <img border="0" class="DotaLogo" src="http://cdn.dota2.com/apps/dota2/images/nav/logo.png">
-        </a>
-      </span>
-
-              <span class="navItem">
-        <a class="navBarItem DotaFont" href="{{url_for('items')}}">Items</a>
-      </span>
-
-             <span class="navItem">
-        <a class="navBarItem DotaFont" href="{{url_for('heroes')}}">Heropedia</a>
-
-      </span>
-        {% if current_user.is_anonymous%}
-              <span class="navItem">
-        <a class="navBarItem DotaFont" href="{{url_for('login')}}">Login</a>
-      </span>
-              <span class="navItem">
-        <a class="navBarItem DotaFont" href="{{url_for('register')}}">Register</a>
-      </span>
-          {% else %}
-          <span class="navItem">
-    <a class="navBarItem DotaFont" href="{{url_for('performance')}}">Performance</a>
-  </span>
-          <span class="navItem">
-  <a class="navBarItem DotaFont" href="{{url_for('mids')}}">Matchdetail</a>
-    </span>
-          <span class="navItem">
-    <a class="navBarItem DotaFont" href="{{url_for('logout')}}">Logout</a>
-  </span>
-
-          {% endif %}
-          </div>
-      </div>
-  </div>
-  </div>
-</center>
 <body class="MainBackgroundImage">
   <div class="container">
   <center><p>Enter Match ID </p><center>
