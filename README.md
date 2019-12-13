@@ -6,11 +6,11 @@ Steps to run the file:
 3)flask run
 
 Dependecncies:
-flask 
-flask_sqlalchemy
-flask_login
-flask_migrate
-flask_wtf
- wtforms
-requests
+flask, 
+flask_sqlalchemy,
+flask_login,
+flask_migrate,
+flask_wtf,
+ wtforms,
+requests,
 werkzeug
